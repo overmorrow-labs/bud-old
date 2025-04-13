@@ -16,8 +16,7 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "build:library": "tsc && vite --config vite.lib.config.ts build",
-    "publish:version": "npm publish"
+    "build:library": "tsc && vite --config vite.lib.config.ts build"
   },
   "bugs": {
     "url": "https://github.com/overmorrow-labs/bud/issues"
