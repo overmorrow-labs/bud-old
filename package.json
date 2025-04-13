@@ -1,8 +1,16 @@
 {
   "name": "@overmorrow-labs/bud",
   "private": false,
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "module",
+  "bugs": {
+    "url": "https://github.com/overmorrow-labs/bud/issues"
+  },
+  "homepage": "https://github.com/overmorrow-labs/bud",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/overmorrow-labs/bud.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
