@@ -1,6 +1,6 @@
 import { ChatOllama } from "@langchain/ollama";
 
-(async () => {
+const test = async () => {
   console.log("Ollama LLM Example");
   const ollamaLlm = new ChatOllama({
     baseUrl: "http://localhost:11434", // Default value
@@ -10,4 +10,6 @@ import { ChatOllama } from "@langchain/ollama";
     "Simulate a rap battle between Stephen Colbert and John Oliver"
   );
   console.log(response.content);
-})();
+};
+
+export default { test };

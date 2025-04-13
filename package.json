@@ -1,68 +1,43 @@
 {
-  "name": "@overmorrow-labs/bud",
-  "version": "1.0.1",
+  "name": "demo",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "private": false,
-  "description": "",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "nodemon --watch src --exec \"tsc && node ./dist/index.js\"",
-    "build": "tsc"
-  },
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
-    }
-  },
-  "bugs": {
-    "url": "https://github.com/overmorrow-labs/bud/issues"
-  },
-  "homepage": "https://github.com/overmorrow-labs/bud",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/overmorrow-labs/bud.git"
-  },
-  "keywords": [],
-  "contributors": [
-    {
-      "name": "Rohit Raj",
-      "email": "rohitrajnovember@gmail.com"
-    }
-  ],
-  "license": "MIT",
-  "files": [
-    "dist"
-  ],
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "tag": "latest",
-    "access": "public",
-    "provenance": true
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "build:library": "tsc && vite --config library.vite.config.ts build"
   },
   "dependencies": {
     "@langchain/core": "^0.3.44",
-    "@langchain/google-vertexai": "^0.2.4",
     "@langchain/langgraph": "^0.2.63",
     "@langchain/ollama": "^0.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "uuid": "^11.1.0",
-    "zustand": "^5.0.3"
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-dts": "^4.5.3"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "github:semantic-release/changelog",
+    "@eslint/js": "^9.21.0",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/exec": "^7.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.1",
     "@semantic-release/release-notes-generator": "^14.0.3",
-    "@types/react": "^19.1.1",
-    "@types/react-dom": "^19.1.2",
-    "nodemon": "^3.1.9",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
     "semantic-release": "^24.2.3",
-    "typescript": "^5.8.3"
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0"
   }
 }
