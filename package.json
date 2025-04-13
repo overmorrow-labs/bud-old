@@ -51,7 +51,9 @@
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "tag": "latest"
+    "tag": "latest",
+    "access": "public",
+    "provenance": true
   },
   "dependencies": {
     "zustand": "^5.0.3"
