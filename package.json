@@ -8,6 +8,7 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
+    "dev": "nodemon --watch src --exec \"tsc && node ./dist/index.js\"",
     "build": "tsc"
   },
   "exports": {
@@ -32,20 +33,6 @@
     }
   ],
   "license": "MIT",
-  "devDependencies": {
-    "@semantic-release/changelog": "github:semantic-release/changelog",
-    "@semantic-release/commit-analyzer": "^13.0.1",
-    "@semantic-release/exec": "^7.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^11.0.1",
-    "@semantic-release/release-notes-generator": "^14.0.3",
-    "@types/react": "^19.1.1",
-    "@types/react-dom": "^19.1.2",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "semantic-release": "^24.2.3",
-    "typescript": "^5.8.3"
-  },
   "files": [
     "dist"
   ],
@@ -56,6 +43,26 @@
     "provenance": true
   },
   "dependencies": {
+    "@langchain/core": "^0.3.44",
+    "@langchain/google-vertexai": "^0.2.4",
+    "@langchain/langgraph": "^0.2.63",
+    "@langchain/ollama": "^0.2.0",
+    "uuid": "^11.1.0",
     "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "github:semantic-release/changelog",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/exec": "^7.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.3",
+    "@types/react": "^19.1.1",
+    "@types/react-dom": "^19.1.2",
+    "nodemon": "^3.1.9",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "semantic-release": "^24.2.3",
+    "typescript": "^5.8.3"
   }
 }
