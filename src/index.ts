@@ -1,6 +1,10 @@
 import { ChatOllama } from "@langchain/ollama";
 
-const test = async () => {
+export const helpTessdt = ({ name }: { name: string }) => {
+  return `Hello ${name}`;
+};
+
+export const test1 = async () => {
   console.log("Ollama LLM Example");
   const ollamaLlm = new ChatOllama({
     baseUrl: "http://localhost:11434", // Default value
@@ -11,5 +15,3 @@ const test = async () => {
   );
   console.log(response.content);
 };
-
-export default { test };

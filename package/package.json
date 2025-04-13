@@ -1,8 +1,9 @@
 {
   "name": "@overmorrow-labs/bud",
-  "private": false,
-  "version": "1.1.3",
+  "description": "",
+  "version": "1.0.1",
   "type": "module",
+  "private": false,
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",

@@ -1,10 +1,10 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
-import react from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react-swc";
 import dts from "vite-plugin-dts";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 
-export default defineConfig(() => ({
+export default defineConfig((configEnv) => ({
   plugins: [
     react(),
     cssInjectedByJsPlugin(),
@@ -14,7 +14,7 @@ export default defineConfig(() => ({
   ],
   build: {
     lib: {
-      entry: resolve("src", "lib", "index.ts"),
+      entry: resolve("src", "index.ts"),
       name: "index",
       formats: ["es", "umd"],
       fileName: (format) => `index.${format}.js`,
